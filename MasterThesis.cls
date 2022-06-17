@@ -12,13 +12,14 @@
 % page padding
 \geometry{top=2.54cm,bottom=2.54cm,left=3.18cm,right=3.18cm}
 
+\renewcommand{\baselinestretch}{1.5}
+
 % header
 \pagestyle{fancy}
 \fancyhf{}
 \cfoot{\thepage}
 
-\providecommand{\keywords}[1]
-{
+\providecommand{\keywords}[1] {
   \small	
   \textbf{\textit{Keywords---}} #1
 }
