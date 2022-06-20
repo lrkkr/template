@@ -24,4 +24,7 @@
   \textbf{\textit{Keywords---}} #1
 }
 
+% newpage before section
+\AddToHook{cmd/section/before}{\clearpage}
+
 \endinput
