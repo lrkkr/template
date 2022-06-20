@@ -8,6 +8,7 @@
 % packages
 \RequirePackage{geometry}
 \RequirePackage{fancyhdr}
+\RequirePackage{indentfirst}
 
 % page padding
 \geometry{top=2.54cm,bottom=2.54cm,left=3.18cm,right=3.18cm}
