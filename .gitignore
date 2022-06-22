@@ -6,4 +6,8 @@
 *.gz
 *.toc
 *.zip
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
 
