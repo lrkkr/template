@@ -1,4 +1,2 @@
 # template
-Latex template
-
-# Still in development
+Latex template [WIP]
