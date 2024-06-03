@@ -15,6 +15,7 @@ jobs:
         uses: github/contributors@v1.4.3
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          REPOSITORY: ${{ github.repository }}
 
       - name: Create issue
         uses: peter-evans/create-issue-from-file@v5
