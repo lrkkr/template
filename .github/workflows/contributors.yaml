@@ -9,30 +9,11 @@ jobs:
     name: contributor report
     runs-on: ubuntu-latest
     permissions:
-      issues: write
+      contents: write
+      pull-requests: write
 
     steps:
-      - name: Set dates
-        shell: bash
-        run: |
-          start_date=2022-01-01
-          end_date=$(date +%Y-%m-%d)
-          echo "START_DATE=$start_date" >> "$GITHUB_ENV"
-          echo "END_DATE=$end_date" >> "$GITHUB_ENV"
-
-      - name: Contributors Action
-        uses: github/contributors@v1.4.3
+      - name: Contribute List
+        uses: akhilmhdh/contributors-readme-action@v2.3.10
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          REPOSITORY: ${{ github.repository }}
-
-      - name: Create issue
-        uses: peter-evans/create-issue-from-file@v5
-        with:
-          title: Contributor report
-          token: ${{ secrets.GH_TOKEN }}
-          content-filepath: ./contributors.md
-          assignees: ${{ github.repository_owner }}
-          labels: |
-            report
-            automated issue
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
