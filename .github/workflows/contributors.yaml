@@ -36,3 +36,7 @@ jobs:
           title: Contributor report
           token: ${{ secrets.GH_TOKEN }}
           content-filepath: ./CONTRIBUTORS.md
+          assignees: ${{ github.repository_owner }}
+          labels: |
+            report
+            automated issue
