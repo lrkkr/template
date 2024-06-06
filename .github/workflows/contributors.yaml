@@ -16,11 +16,7 @@ jobs:
         shell: bash
         run: |
           start_date=2022-01-01
-
-          # Calculate the last day of the previous month
-          end_date=$(date -d "$start_date +1 month -1 day" +%Y-%m-%d)
-
-          #Set an environment variable with the date range
+          end_date=$(date +%Y-%m-%d)
           echo "START_DATE=$start_date" >> "$GITHUB_ENV"
           echo "END_DATE=$end_date" >> "$GITHUB_ENV"
 
@@ -35,7 +31,7 @@ jobs:
         with:
           title: Contributor report
           token: ${{ secrets.GH_TOKEN }}
-          content-filepath: ./CONTRIBUTORS.md
+          content-filepath: ./contributors.md
           assignees: ${{ github.repository_owner }}
           labels: |
             report
